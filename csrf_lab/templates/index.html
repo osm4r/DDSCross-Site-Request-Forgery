@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Prevention Lab</title>
+</head>
+<body>
+    <h1>CSRF Prevention Lab</h1>
+    <p>Tu saldo actual es: {{ session.balance  }}</p>
+    <form method = "post">
+        {{ form.csrf_token }}
+        <label for = "amount">Cantidad a transferir: </label>
+        {{ form.amount() }}
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
